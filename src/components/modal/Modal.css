@@ -83,6 +83,6 @@
 .error-message {
     color: red;
     margin-top: 10px;
-    background-color: #bebebe;
+    /* background-color: #bebebe; */
   }
 
