@@ -1,6 +1,6 @@
 import api from './api';
 
 export const fetchAgencias = () => api.get('/agencias');
-export const createAgencia = (data) => api.post('/agencias', data);
-export const updateAgencia = (id, data) => api.put(`/agencias/${id}`, data);
+export const createAgencia = (agencia) => api.post('/agencias', agencia);
+export const updateAgencia = (id, agencia) => api.put(`/agencias/${id}`, agencia);
 export const deleteAgencia = (id) => api.delete(`/agencias/${id}`);

@@ -1,12 +1,11 @@
-import React from "react";
-import ClienteList from "./components/Cliente/ClienteList";
-import ClienteForm from "./components/Cliente/ClienteForm";
+import React from 'react';
+import './App.css';
+import Main from './components/main/Main';
 
 function App() {
+  
   return (
-    <div>
-      <h1>Acc-Bank</h1>
-    </div>
+    <Main />
   );
 }
 

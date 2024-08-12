@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #23272a; /* Tonalidade de cinza mais escura */
+    color: white;
+    padding: 1em;
+    /* text-align: center; */
+    z-index: 1000; /* Garante que a navbar fique acima da sidebar */
+    position: relative; /* Necessário para garantir a sobreposição correta */
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  

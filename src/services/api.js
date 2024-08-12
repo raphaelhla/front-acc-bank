@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://localhost:8080/'});
+    baseURL: 'http://ec2-100-26-107-150.compute-1.amazonaws.com:8080'});
 
-export const getClientes = () => api.get('/clientes');
-export const createCliente = (cliente) => api.post('clientes', cliente);
+export default api;
 
