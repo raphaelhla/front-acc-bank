@@ -1,0 +1,12 @@
+.main-container {
+    display: flex;
+    flex-direction: column; /* Garante que a Navbar fique no topo */
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    height: calc(100% - 68px); 
+  }
+  
