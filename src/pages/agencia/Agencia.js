@@ -40,29 +40,27 @@ const Agencia = () => {
         loadAgencias();
       }, []);
 
-    return (
-      <div className="agencia-container">
-        <h1 className="agencia-header">Agências</h1>
-  
-        <div className="agencia-actions">
-
-          <button className="btn-create" onClick={() => setModalOpen(true)}>
-            Cadastrar Agência
-          </button>
-  
-          <div className="search-container">
-            <input type="text" placeholder="Pesquisar por uma Agência" className="input-search" />
-            <button className="btn-search">🔍</button>
-          </div>
-
-        </div>
-  
-        <AgenciaList agencias={agencias} handleDelete={handleDelete} handleEdit={handleEdit}/>
-  
-        <Modal isOpen={modalOpen} titulo={selectedAgencia ? "Editar Agência" : "Cadastrar Agência"}>
-          <AgenciaForm onClose={() => {setModalOpen(false); setSelectedAgencia(null)}} loadAgencias={loadAgencias} selectedAgencia={selectedAgencia} />
-        </Modal>
-      </div>
+	return (
+		<div className="agencia-container">
+			<h1 className="agencia-header">Agências</h1>
+	
+			<div className="agencia-actions">
+				<button className="btn-create" onClick={() => setModalOpen(true)}>
+					Cadastrar Agência
+				</button>
+		
+				<div className="search-container">
+					<input type="text" placeholder="Pesquisar por uma Agência" className="input-search" />
+					<button className="btn-search">🔍</button>
+				</div>
+			</div>
+	
+			<AgenciaList agencias={agencias} handleDelete={handleDelete} handleEdit={handleEdit}/>
+	
+			<Modal isOpen={modalOpen} titulo={selectedAgencia ? "Editar Agência" : "Cadastrar Agência"}>
+				<AgenciaForm onClose={() => {setModalOpen(false); setSelectedAgencia(null)}} loadAgencias={loadAgencias} selectedAgencia={selectedAgencia} />
+			</Modal>
+		</div>
     );
   };
   

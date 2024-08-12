@@ -44,18 +44,16 @@ const Cliente = () => {
         <div className="cliente-container">
             <h1 className="cliente-header">Clientes</h1>
     
-            <div className="cliente-actions">
-
-            <button className="btn-create" onClick={() => setModalOpen(true)}>
-                Cadastrar Cliente
-            </button>
-    
-            <div className="search-container">
-                <input type="text" placeholder="Pesquisar por um Cliente" className="input-search" />
-                <button className="btn-search">🔍</button>
-            </div>
-
-            </div>
+                <div className="cliente-actions">
+                    <button className="btn-create" onClick={() => setModalOpen(true)}>
+                        Cadastrar Cliente
+                    </button>
+        
+                    <div className="search-container">
+                        <input type="text" placeholder="Pesquisar por um Cliente" className="input-search" />
+                        <button className="btn-search">🔍</button>
+                    </div>
+                </div>
     
             <ClienteList clientes={clientes} handleDelete={handleDelete} handleEdit={handleEdit}/>
     
