@@ -80,6 +80,27 @@
     background-color: #5a6268;
 }
 
+.modal-body select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    color: #333;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 105%;
+    margin-bottom: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.modal-body select:focus {
+    border-color: #1b1b1b; /* Cor do contorno ao focar */
+    outline: none;
+}
+
+.modal-body option {
+    padding: 10px;
+}
+
 .error-message {
     color: red;
     margin-top: 10px;

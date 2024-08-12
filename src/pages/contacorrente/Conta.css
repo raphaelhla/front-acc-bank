@@ -1,10 +1,10 @@
-.agencia-container {
+.conta-container {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-
-.agencia-header {
+  
+.conta-header {
     margin: 3px;
     text-align: center;
     padding-bottom: 25px;
@@ -15,15 +15,15 @@
     border-radius: 5px;
     border: 2px solid #b6b6b6; 
 }
-
-.agencia-actions {
+  
+.conta-actions {
     margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
+  
 .btn-create {
     padding: 10px 20px;
     background-color: #28a745;
@@ -37,7 +37,7 @@
 .btn-create:hover {
     background-color: #218838;
 }
-
+  
 .search-container {
     display: flex;
     align-items: center;
@@ -64,3 +64,9 @@
 .btn-search:hover {
     background-color: #0069d9;
 }
+  
+  
+  
+  
+  
+  
