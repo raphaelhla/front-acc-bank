@@ -2,9 +2,7 @@ import React from 'react';
 import Utils from '../../utils/utils';
 import './ClienteList.css';
 
-
 const ClienteList = ({ clientes, handleDelete, handleEdit }) => {
-
 	return (
 		<div className="table-container">
 			<table className="table">
