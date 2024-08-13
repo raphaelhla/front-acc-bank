@@ -2,6 +2,7 @@ import React from 'react';
 import Agencia from '../../pages/agencia/Agencia';
 import Cliente from '../../pages/cliente/Cliente';
 import Conta from '../../pages/contacorrente/Conta';
+import Transacao from '../../pages/extrato/Extrato';
 import './Content.css';
 
 function Content({ selectedOption }) {
@@ -11,6 +12,7 @@ function Content({ selectedOption }) {
         {selectedOption === 'Agencia' && <Agencia />}
         {selectedOption === 'Cliente' && <Cliente />}
         {selectedOption === 'Conta Corrente' && <Conta />}
+        {selectedOption === 'Extrato' && <Transacao />}
       </div>
     </div>
   );

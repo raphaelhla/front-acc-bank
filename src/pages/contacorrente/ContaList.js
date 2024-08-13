@@ -2,9 +2,7 @@ import React from 'react';
 import Utils from '../../utils/utils';
 import './ContaList.css';
 
-
-const ContaList = ({ contas, handleEdit }) => {
-
+const ContaList = ({ contas, handleOperation }) => {
 	return (
 		<div className="table-container">
 			<table className="table">
@@ -28,9 +26,9 @@ const ContaList = ({ contas, handleEdit }) => {
                         <td>Nome da Agencia</td>
                         {/* <td>{conta.cliente.nome}</td> */}
 						<td>
-							<button className="btn-edit" onClick={() => handleEdit(conta)}>Sacar</button>
-                            <button className="btn-edit" onClick={() => handleEdit(conta)}>Depositar</button>
-                            <button className="btn-edit" onClick={() => handleEdit(conta)}>Transferir</button>
+							<button className="btn-edit" onClick={() => handleOperation(conta, "Saque")}>Sacar</button>
+                            <button className="btn-edit" onClick={() => handleOperation(conta, "Deposito")}>Depositar</button>
+                            <button className="btn-edit" onClick={() => handleOperation(conta, "Transferencia")}>Transferir</button>
 							{/* <button className="btn-delete" onClick={() => handleDelete(conta.id)}>Deletar</button> */}
 						</td>
                         
