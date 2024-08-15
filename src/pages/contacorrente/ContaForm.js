@@ -14,11 +14,11 @@ const ContaForm = ({ onClose, loadContas, selectedConta, operationType }) => {
 
     const printarErros = (error, defaultMessage) => {
         console.log(error);
-        if (error.response?.data?.errors) {
-            const errorMessages = error.response.data.errors.join('\n');
+        if (error.response?.data?.erros) {
+            const errorMessages = error.response.data.erros.join('\n');
             setError(errorMessages);
         } else {
-            setError(error.response?.data?.message || defaultMessage);
+            setError(error.response?.data?.mensagem || defaultMessage);
         }
     };
 

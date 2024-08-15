@@ -49,10 +49,10 @@ const Cliente = () => {
                         Cadastrar Cliente
                     </button>
         
-                    <div className="search-container">
+                    {/* <div className="search-container">
                         <input type="text" placeholder="Pesquisar por um Cliente" className="input-search" />
                         <button className="btn-search">🔍</button>
-                    </div>
+                    </div> */}
                 </div>
     
             <ClienteList clientes={clientes} handleDelete={handleDelete} handleEdit={handleEdit}/>

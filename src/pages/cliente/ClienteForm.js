@@ -4,7 +4,7 @@ import { fetchAgencias } from '../../services/AgenciaService'; // Certifique-se 
 import { createCliente, updateCliente } from '../../services/ClienteService';
 
 const ClienteForm = ({ onClose, loadClientes, selectedCliente }) => {
-    const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '' });
+    const [formData, setFormData] = useState({ nome: '', cpf: '', telefone: '', email: '' });
     const [idAgencia, setIdAgencia] = useState('');
     const [agencias, setAgencias] = useState([]);
     const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ const ClienteForm = ({ onClose, loadClientes, selectedCliente }) => {
             setFormData(selectedCliente);
             setIdAgencia(selectedCliente.idAgencia); // Defina o ID da agência selecionada
         } else {
-            setFormData({ nome: '', cpf: '', telefone: '' });
+            setFormData({ nome: '', cpf: '', telefone: '', email: '' });
             setIdAgencia('');
         }
     }, [selectedCliente]);
@@ -52,15 +52,15 @@ const ClienteForm = ({ onClose, loadClientes, selectedCliente }) => {
             }
             loadClientes();
             alert('Cliente salvo com sucesso!');
-            setFormData({ nome: '', cpf: '', telefone: '' });
+            setFormData({ nome: '', cpf: '', telefone: '', email: '' });
             setIdAgencia('');
             onClose();
         } catch (err) {
-            if (err.response?.data?.errors) {
-                const errorMessages = err.response.data.errors.join('\n');
+            if (err.response?.data?.erros) {
+                const errorMessages = err.response.data.erros.join('\n');
                 setError(errorMessages);
             } else {
-                setError(err.response?.data?.message || 'Erro ao salvar cliente');
+                setError(err.response?.data?.mensagem || 'Erro ao salvar cliente');
             }
         }
     };
@@ -70,6 +70,7 @@ const ClienteForm = ({ onClose, loadClientes, selectedCliente }) => {
             <Input label="Nome" type="text" name="nome" value={formData.nome} onChange={handleChange} />
             <Input label="CPF" type="text" name="cpf" value={formData.cpf} onChange={handleChange} />
             <Input label="Telefone" type="text" name="telefone" value={formData.telefone} onChange={handleChange} />
+            <Input label="Email" type="text" name="email" value={formData.email} onChange={handleChange} />
 
             {!selectedCliente && (
                 <>

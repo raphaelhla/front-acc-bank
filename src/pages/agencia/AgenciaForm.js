@@ -26,12 +26,12 @@ const AgenciaForm = ({ onClose, loadAgencias, selectedAgencia }) => {
             onClose();
         } catch (err) {
             // Verifica se há erros de validação na resposta
-            if (err.response?.data?.errors) {
+            if (err.response?.data?.erros) {
                 // Junta todos os erros em uma string, separados por uma quebra de linha
-                const errorMessages = err.response.data.errors.join('\n');
+                const errorMessages = err.response.data.erros.join('\n');
                 setError(errorMessages);
             } else {
-                setError(err.response?.data?.message || 'Erro ao salvar agência');
+                setError(err.response?.data?.mensagem || 'Erro ao salvar agência');
             }
         }
     };

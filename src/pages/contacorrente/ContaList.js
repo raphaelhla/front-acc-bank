@@ -11,8 +11,8 @@ const ContaList = ({ contas, handleOperation }) => {
 					<th>Id</th>
 					<th>Numero</th>
 					<th>Saldo</th>
-                    <th>Cliente</th>
-                    <th>Agencia</th>
+                    {/* <th>Cliente</th> */}
+                    {/* <th>Agencia</th> */}
 					<th>Action</th>
 				</tr>
 				</thead>
@@ -22,8 +22,8 @@ const ContaList = ({ contas, handleOperation }) => {
 						<td>{conta.id}</td>
 						<td>{conta.numero}</td>
 						<td>{Utils.formatarMoeda(conta.saldo)}</td>
-                        <td>Nome do Cliente</td>
-                        <td>Nome da Agencia</td>
+                        {/* <td>Nome do Cliente</td> */}
+                        {/* <td>Nome da Agencia</td> */}
                         {/* <td>{conta.cliente.nome}</td> */}
 						<td>
 							<button className="btn-edit" onClick={() => handleOperation(conta, "Saque")}>Sacar</button>
