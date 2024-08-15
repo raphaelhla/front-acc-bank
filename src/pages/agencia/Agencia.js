@@ -49,10 +49,10 @@ const Agencia = () => {
 					Cadastrar Agência
 				</button>
 		
-				<div className="search-container">
+				{/* <div className="search-container">
 					<input type="text" placeholder="Pesquisar por uma Agência" className="input-search" />
 					<button className="btn-search">🔍</button>
-				</div>
+				</div> */}
 			</div>
 	
 			<AgenciaList agencias={agencias} handleDelete={handleDelete} handleEdit={handleEdit}/>

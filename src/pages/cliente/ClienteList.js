@@ -12,6 +12,7 @@ const ClienteList = ({ clientes, handleDelete, handleEdit }) => {
 					<th>Nome</th>
 					<th>CPF</th>
 					<th>Telefone</th>
+					<th>Email</th>
                     <th>Agencia</th>
 					<th>Action</th>
 				</tr>
@@ -21,8 +22,9 @@ const ClienteList = ({ clientes, handleDelete, handleEdit }) => {
 					<tr key={cliente.id}>
 						<td>{cliente.id}</td>
 						<td>{cliente.nome}</td>
-						<td>{Utils.formatarCPF(cliente.cpf)}</td>
+						<td>{cliente.cpf}</td>
 						<td>{Utils.formatarTelefone(cliente.telefone)}</td>
+						<td>{(cliente.email)}</td>
                         <td>{cliente.agencia.nome}</td>
 						<td>
 							<button className="btn-edit" onClick={() => handleEdit(cliente)}>Editar</button>

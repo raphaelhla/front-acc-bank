@@ -13,6 +13,7 @@ const TransacaoList = ({ transacoes }) => {
                     <th>Valor</th>
 					{/* <th>Numero Conta</th> */}
                     <th>Data</th>
+					<th>Descrição</th>
 
 				</tr>
 				</thead>
@@ -24,6 +25,7 @@ const TransacaoList = ({ transacoes }) => {
 						<td>{Utils.formatarMoeda(transacao.valor)}</td>
                         {/* <td>{transacao.contaCorrente.numero}</td> */}
                         <td>{transacao.dataHora}</td>
+						<td>{transacao.descricao}</td>
 					</tr>
                 ))}
 				</tbody>
